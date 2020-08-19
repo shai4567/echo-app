@@ -4,7 +4,8 @@ pipeline {
    stages {
       stage('Hello') {
          steps {
-            sh "echo on branch" + env.BRANCH_NAME
+            sh "echo on branch " + env.BRANCH_NAME
+            sh 'printenv'
          }
       }
    }
