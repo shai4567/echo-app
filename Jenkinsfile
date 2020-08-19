@@ -4,7 +4,7 @@ pipeline {
    stages {
       stage('Hello') {
          steps {
-            sh "grep docker /etc/group"
+            sh "echo on branch" + env.BRANCH_NAME
          }
       }
    }
