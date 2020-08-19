@@ -4,9 +4,7 @@ pipeline {
    stages {
       stage('build') {
          steps {
-            dir("echo") {
-                sh 'docker build -t '
-            }
+                sh 'docker build -t ${GIT_BRANCH}-${GIT_COMMIT} .'
          }
       }
    }
