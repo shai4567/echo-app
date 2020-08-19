@@ -4,8 +4,9 @@ pipeline {
    stages {
       stage('Hello') {
          steps {
-            sh "echo on branch " + env.BRANCH_NAME
-            sh 'printenv'
+            dir("echo") {
+               sh 'docker build -t echo:1.0.${BUILD_NUMBER}' 
+            }
          }
       }
    }
