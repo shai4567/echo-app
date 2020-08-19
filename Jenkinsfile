@@ -4,7 +4,7 @@ pipeline {
    stages {
       stage('Hello') {
          steps {
-            sh "docker run hello-world"
+            sh "grep docker /etc/group"
          }
       }
    }
