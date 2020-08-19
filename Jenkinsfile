@@ -4,6 +4,7 @@ pipeline {
    stages {
       stage('Hello') {
          steps {
+            sh "echo $USER"
             sh "docker run hello-world"
          }
       }
